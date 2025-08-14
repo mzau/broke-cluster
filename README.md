@@ -171,22 +171,11 @@ We're looking for:
 - ⭐ Star to follow development
 - 🔪 Try [MLX Knife](https://github.com/mzau/mlx-knife) today!
 
-## FAQ
+## Documentation
 
-**Q: How is this different from Ollama?**  
-A: Ollama is great for single machines. BROKE focuses on multi-node routing and agent orchestration. Currently optimized for MLX/Apple Silicon, but the architecture is designed to adapt to evolving hardware platforms.
-
-**Q: Will it support NVIDIA GPUs?**  
-A: Currently MLX/Apple Silicon focused. Support for other platforms (NVIDIA, AMD with unified memory, etc.) depends on hardware evolution and community interest. We're building infrastructure that can adapt to whatever hardware delivers the best unified memory experience.
-
-**Q: What about Kubernetes/Docker?**  
-A: We're building something simpler. Think "Kubernetes ideas without Kubernetes complexity."
-
-**Q: Can I use this for production?**  
-A: Not yet. Target for production-ready: 2026 H2.
-
-**Q: Why "BROKE"?**  
-A: Because after buying all these Macs, we're broke! 🦫 As for what BROKE stands for... is it "BROKE Runs On Keen Efficiency"? "Building Robust Orchestrated Knowledge Engines"? "Beaver's Recursive Optimization of Keen Excellence"? The community is still debating! 😄
+- 📖 [FAQ](FAQ.md) - Frequently Asked Questions
+- 💬 [Discussions](discussions) - Community Q&A
+- 🔪 [MLX Knife](https://github.com/mzau/mlx-knife) - Node management tool
 
 ---
 

@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="assets/Broke-Beaver v2.svg" alt="BROKE Beaver Logo" width="200"/>
+  <img src="assets/broke-beaver-v2.png" alt="BROKE Beaver Logo" width="200"/>
   
   **BROKE Runs On Keen Efficiency**
  

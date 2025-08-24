@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+benchmark-env/
+mlx-env/
+
+# IDE
+.vscode/
+.idea/
+.DS_Store
+
+# Results (keep structure but not detailed results)
+benchmarks/results/*_20*.json
+benchmarks/results/*_detailed_*.json
+benchmarks/results/sequential_benchmark_*.json
+!benchmarks/results/.gitkeep
+!benchmarks/results/community/.gitkeep
+!benchmarks/results/community/*.json
+!benchmarks/results/example_*.json
+
+# Logs
+*.log
+logs/
+
+# Environment
+.env
+.env.local
+
+# Claude Memory (should stay private)
+CLAUDE.md
+
+# Local configuration (contains secrets)
+config/cluster.local.json
+
+# Training data
+*.jsonl
+training_events.jsonl

@@ -219,6 +219,34 @@ export BROKE_CONFIG_DIR=config/3n4m  # 3 nodes, 4 models
 - **Privacy-Preserving**: Only technical patterns collected, no business logic
 - **Research Contribution**: Anonymous data can contribute to LLM routing research
 
+## Use Cases
+
+### Q: Why focus on software development instead of general multimodal AI?
+
+**A: Software development is the most security-sensitive use case requiring on-premises control.**
+
+- Source code and IP must stay local (no cloud leakage)
+- Development workflows need predictable, controlled environments  
+- Agent-based patterns emerge naturally for code review, testing, documentation
+
+**Why not multimodal:** Images/video less security-critical; general chat can safely use cloud services.
+
+### Q: What specific development workflows benefit from BROKE's routing?
+
+**A: Code-intensive tasks where different models excel at different complexity levels:**
+
+- **Fast models:** Code formatting, simple documentation, unit test generation
+- **Balanced models:** Code review, API integration, debugging assistance  
+- **Premium models:** Architecture design, complex refactoring, performance optimization
+
+**Agent collaboration:** Multiple AI assistants working on different aspects of the same project.
+
+### Q: Is BROKE suitable for multi-agent development workflows?
+
+**A: Planned for Q4/2025 with appropriate safety considerations.**
+
+Agent-driven development requires careful isolation to prevent unintended system modifications. Current focus: single-user team routing. Multi-agent orchestration is a future milestone.
+
 ## Implementation & Usage
 
 ### Q: What's the current status and roadmap?
@@ -243,6 +271,16 @@ export BROKE_CONFIG_DIR=config/3n4m  # 3 nodes, 4 models
 - Team pattern learning
 - Predictive model loading
 - True team productivity optimization
+
+### Q: Will BROKE support multimodal AI (images, documents)?
+
+**A: Via plugin architecture - letting the community drive which modes matter most.**
+
+**Why plugins:** Rather than guessing which multimodal features developers need, we'll provide a plugin system. If OCR for document analysis proves critical, someone will build it. If image generation seems appealing, the community can contribute it.
+
+**Philosophy:** Market-driven feature development over engineering assumptions. The community decides what's "sexy" enough to implement.
+
+**Core focus:** Text-based routing remains our specialty and development priority.
 
 ### Q: What hardware do I need to get started?
 
@@ -391,11 +429,16 @@ See detailed hardware strategy discussion above. In short: unified memory advant
 
 ### Q: What about Kubernetes/Docker?
 
-**A: We're building something simpler:**
+**A: Apple Silicon GPU performance requires native execution:**
 
-Think "Kubernetes ideas without Kubernetes complexity." BROKE focuses on intelligent routing rather than container orchestration, targeting small teams (5-10 users) rather than enterprise-scale deployments.
+**Technical Reality (2025):**
+- MLX/Metal needs native macOS GPU access for performance
+- Containers would force CPU-only execution (~10x slower)
+- Apple's container platform still in early development
 
-**Philosophy:** Right-sized complexity for the problem - team coordination, not data center management.
+**Architectural Philosophy:** "Kubernetes ideas without Kubernetes complexity" - intelligent routing for small teams (5-10 users), not enterprise container orchestration.
+
+**BROKE Scope:** Native multi-node MLX inference only. Container deployment is out-of-scope for the core server.
 
 ### Q: Can I use this for production?
 
@@ -431,4 +474,4 @@ As for what BROKE stands for... is it "BROKE Runs On Keen Efficiency"? "Building
 
 ---
 
-*Last Updated: 2025-08-14 - Living document, updated as project evolves*
+*Last Updated: 2025-08-23 - Living document, updated as project evolves*
